@@ -1,0 +1,179 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* classes auxiliares */
+
+.borda{
+	border:1px solid #ccc
+}
+
+.centro-tela{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+	overflow: hidden;
+	width: 100%;
+}
+
+
+
+
+.container{
+    width: 100%;
+	height: 100%;
+	display: inline;
+	position: absolute;
+   
+}
+
+
+.painel-esquerda{
+	width: 50%;
+	height: 100%;
+	background-color: #041C47;
+	
+	float: left;
+}
+
+.painel-esquerda img{
+	width: 70%
+}
+
+
+.painel-direita{
+	width: 50%;
+	height: 100%;
+	flex-direction: column;
+}
+
+.painel-direita h2{
+	margin: 15px 0;
+	color: #333;
+	text-transform: uppercase;
+	font-size: 28px
+}
+
+.container-login{
+	flex-direction: column;
+	width: 100%;
+	height:40%;
+}
+
+.container-dados{
+	width: 45%;
+	min-width: 400px;
+}
+
+.container-login i{
+	color: #ccc;
+}
+
+#campo-email , #campo-senha{
+	width: 100%;
+	height: 70px;
+	box-shadow: 0 1px 5px rgba(0,0,0,.20);
+	border-radius: 10px;
+	font-size: 20px;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+#campo-senha{
+	margin-top: 30px;
+}
+
+#campo-email input , #campo-senha input{
+	border: none;
+	width: 90%;
+	padding-left: 10PX;
+	font-size: 25px;
+
+}
+.container-login input:focus{
+    outline: none;
+}
+
+.btn{
+	width: 100%;
+	height: 50px;
+	border-radius: 15px;
+	outline: none;
+	border: none;
+	background: #FFBE24;
+	font-size: 1.2rem;
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+	margin: 1rem 0;
+	cursor: pointer;
+	box-shadow: 0 1px 5px rgba(0,0,0,.20);
+}
+
+.container > img{
+	width: 360px;
+	position: absolute;
+}
+
+.img-mobile{
+	display: none;
+	
+}
+
+
+
+.painel-direita .img-mobile:last-of-type{
+	
+}
+
+
+@media screen and (max-width: 1000px){
+	.painel-esquerda{
+		display: none;
+		
+	}
+
+	.painel-direita{
+		width: 70%;
+	}
+
+
+	.container{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: row;
+	}
+
+	.img-mobile{
+		display: flex;
+		width: 100%;
+		height: 30%;
+		
+	}
+	
+	.img-mobile img{
+		width: 100%;
+		max-width: 300px;
+		
+	}
+	
+	.img-mobile:nth-of-type(1) img{
+		position: relative;
+		left: 70px;
+		width: 80%;
+	}
+
+
+}
